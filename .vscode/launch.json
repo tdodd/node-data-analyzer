@@ -1,0 +1,55 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Server",
+			"program": "${workspaceFolder}/src/index.js",
+			"args": [
+				"port=3500",
+				"mode=development"
+			],
+			"stopOnEntry": false,
+			"cwd": "${workspaceRoot}",
+			"preLaunchTask": null,
+			"runtimeExecutable": null,
+			"runtimeArgs": [
+				"--nolazy"
+			],
+			"autoAttachChildProcesses": false,
+			"console": "internalConsole",
+			"sourceMaps": true,
+			"protocol": "auto",
+			"outFiles": [
+				"${workspaceRoot}/src/**/*",
+				"${workspaceRoot}/test/**/*"
+			],
+		},
+		{
+			"name": "Run unit tests",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+			"args": [
+				"--no-timeouts",
+				"test/**/*.js"
+			],
+			"outFiles": [
+				"${workspaceRoot}/src/**/*",
+				"${workspaceRoot}/test/unit/**/*"
+			],
+			"stopOnEntry": false,
+			"cwd": "${workspaceRoot}",
+			"preLaunchTask": null,
+			"runtimeExecutable": null,
+			"runtimeArgs": [
+				"--nolazy"
+			],
+			"autoAttachChildProcesses": false,
+			"console": "internalConsole",
+			"sourceMaps": true,
+			"protocol": "auto"
+		}
+	]
+}

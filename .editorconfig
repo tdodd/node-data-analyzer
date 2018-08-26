@@ -1,0 +1,16 @@
+[*]
+root = true
+charset = utf-8
+
+# Use Linux line endings
+end_of_line = lf
+
+# 4 space tabs
+indent_style = tab
+tab_width = 4
+
+# Remove any trailing whitespace
+trim_trailing_whitespace = true
+
+# Automatically insert a new line at EOF
+insert_final_newline = true

@@ -1,0 +1,15 @@
+# NPM Logs
+npm-debug.log
+
+# Node Packages
+node_modules
+
+# Compiled Output
+src/**/*.js
+src/**/*.js.map
+test/**/*.js
+test/**/*.js.map
+
+# Temp files
+temp
+

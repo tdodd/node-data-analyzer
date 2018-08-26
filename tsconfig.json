@@ -1,0 +1,20 @@
+{
+	"compileOnSave": true,
+	"noUnusedLocals": true,
+	"compilerOptions": {
+		"module": "commonjs",
+		"removeComments": true,
+		"sourceMap": true,
+		"target": "ES6",
+		"watch": false,
+		"noUnusedLocals": true,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitAny": true
+	},
+	"exclude": [
+		".vscode",
+		"node_modules",
+		"release",
+		"temp"
+	]
+}

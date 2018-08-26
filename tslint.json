@@ -1,0 +1,40 @@
+{
+	"rules": {
+		"class-name": true,
+		"cyclomatic-complexity": {
+			"options": 20
+		},
+		"no-duplicate-variable": true,
+		"no-shadowed-variable": true,
+		"no-string-throw": true,
+		"member-access": true,
+		"typedef": [
+			true,
+			"parameter",
+			"call-signature",
+			"property-declaration"
+		],
+		"no-any": true,
+		"no-var-keyword": true,
+		"semicolon": [
+			true,
+			"always"
+		],
+		"trailing-comma": [
+			true,
+			{
+				"multiline": "never",
+				"singleline": "never"
+			}
+		],
+		"triple-equals": [
+			true,
+			"allow-null-check",
+			"allow-undefined-check"
+		],
+		"variable-name": [
+			true,
+			"ban-keywords"
+		]
+	}
+}
