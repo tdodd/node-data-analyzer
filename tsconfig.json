@@ -5,7 +5,7 @@
 		"module": "commonjs",
 		"removeComments": true,
 		"sourceMap": true,
-		"target": "ES6",
+		"target": "es2017",
 		"watch": false,
 		"noUnusedLocals": true,
 		"forceConsistentCasingInFileNames": true,

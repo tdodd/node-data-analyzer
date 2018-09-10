@@ -13,3 +13,6 @@ test/**/*.js.map
 # Temp files
 temp
 
+# NYC Coverage Report
+.nyc_output
+coverage

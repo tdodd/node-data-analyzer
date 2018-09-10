@@ -1,4 +1,4 @@
-import * as os from "os";
+import { Utils } from "./utils/utils";
 
 /**
  * Information about the server's configuration
@@ -9,10 +9,10 @@ export class Config {
 	private _mode: string;
 	private _host: string;
 
-	constructor(port: number, mode: string) {
+	constructor(port?: number, mode?: string) {
 		this._port = port;
 		this._mode = mode;
-		this._host = os.hostname();
+		this._host = Utils.getHostAddress();
 	}
 
 	public static MODES = {

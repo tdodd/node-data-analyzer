@@ -12,8 +12,6 @@
 			],
 			"stopOnEntry": false,
 			"cwd": "${workspaceRoot}",
-			"preLaunchTask": null,
-			"runtimeExecutable": null,
 			"runtimeArgs": [
 				"--nolazy"
 			],
@@ -33,16 +31,14 @@
 			"program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
 			"args": [
 				"--no-timeouts",
-				"test/**/*.js"
+				"--recursive"
 			],
 			"outFiles": [
 				"${workspaceRoot}/src/**/*",
-				"${workspaceRoot}/test/unit/**/*"
+				"${workspaceRoot}/test/**/*"
 			],
 			"stopOnEntry": false,
 			"cwd": "${workspaceRoot}",
-			"preLaunchTask": null,
-			"runtimeExecutable": null,
 			"runtimeArgs": [
 				"--nolazy"
 			],

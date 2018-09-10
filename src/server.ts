@@ -4,7 +4,6 @@ import { ClassificationRoute } from "./routes/classification";
 import * as http from "http";
 import * as createError from "http-errors";
 import * as express from "express";
-import * as cookieParser from "cookie-parser";
 import * as logger from "morgan";
 
 export class Server {
@@ -26,21 +25,20 @@ export class Server {
 		server.listen(this._config.getPort());
 	}
 
-	private registerMiddleware(app: Express.App): void {
+	private registerMiddleware(app: Express.Application): void {
 		app.use(logger('dev'));
 		app.use(express.json());
 		app.use(express.urlencoded({ extended: false }));
-		app.use(cookieParser());
 	}
 
-	private registerErrorHandlers(app: Express.App): void {
+	private registerErrorHandlers(app: Express.Application): void {
 		// 404 error handler
-		app.use((req, res, next) => {
+		app.use((req: Express.Request, res: Express.Response, next: Express.NextFunction) => {
 			next(createError(404));
 		});
 
 		// 500 error handler
-		app.use((err, req, res, next) => {
+		app.use((err: Express.ErrorRequestHandler, req: Express.Request, res: Express.Response, next: Express.nextFunction) => {
 			// Only show error in development mode
 			res.locals.message = err.message;
 			res.locals.error = this._config.getMode() === Config.MODES.DEVELOPMENT ? err : {};
@@ -52,6 +50,7 @@ export class Server {
 	}
 
 	private registerRoutes(app: Express.App): void {
-		app.use('/classification', ClassificationRoute);
+		let router = express.Router();
+		app.use('/api/v1/classification', router.classifyData());
 	}
 }

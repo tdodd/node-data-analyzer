@@ -1,25 +1,40 @@
 {
-	"name": "node-data-analyzer",
-	"version": "1.0.0",
-	"description": "Analyze and classify data",
-	"scripts": {
-		"start": "node src/index.js",
-		"watch": "./node_modules/typescript/bin/tsc -w",
-		"test": "node ./node_modules/mocha/bin/mocha test/**/*.spec.js",
-		"build": "./node_modules/typescript/bin/tsc",
-		"lint": "./node_modules/tslint/bin/tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'"
-	},
-	"author": "Thomas Dodd",
-	"license": "ISC",
-	"devDependencies": {
-		"@types/chai": "^4.1.4",
-		"@types/mocha": "^5.2.5",
-		"bluebird": "^3.5.1",
-		"chai": "^4.1.2",
-		"mocha": "^5.2.0",
-		"nodemon": "^1.18.3",
-		"sinon": "^6.1.5",
-		"tslint": "^5.11.0",
-		"typescript": "^3.0.1"
-	}
+  "name": "node-data-analyzer",
+  "author": "Thomas Dodd",
+  "version": "1.0.0",
+  "license": "ISC",
+  "description": "Analyze and classify data",
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "node_modules/typescript/bin/tsc -w",
+    "test": "node_modules/mocha/bin/mocha --recursive",
+    "coverage": "node_modules/nyc/bin/nyc --reporter=html node_modules/mocha/bin/mocha --recursive",
+    "build": "npm run lint && npm run compile",
+    "compile": "node_modules/typescript/bin/tsc",
+    "lint": "node_modules/tslint/bin/tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.24",
+    "@types/chai": "^4.1.4",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/express": "^4.16.0",
+    "@types/http-errors": "^1.6.1",
+    "@types/mocha": "^5.2.5",
+    "@types/morgan": "^1.7.35",
+    "@types/underscore": "^1.8.9",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3",
+    "nyc": "^13.0.1",
+    "sinon": "^6.1.5",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "express": "^4.16.3",
+    "http-errors": "^1.7.0",
+    "morgan": "^1.9.0",
+    "underscore": "^1.9.1"
+  }
 }
