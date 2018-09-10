@@ -7,7 +7,7 @@ export class CsvService {
 	 * @param {string} path the path to the csv file
 	 * @return {string[]} an array of field header names
 	 */
-	public static getColumnNames(dataset: string): string[] {
+	public static getFieldNames(dataset: string): string[] {
 		return Utils.trim(dataset.split('\n')[0].split(","));
 	}
 

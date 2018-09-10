@@ -14,7 +14,7 @@ describe("CsvService", () => {
 
 	it("Should extract dataset headers", async () => {
 		const expectedHeaders = ["lastName", "firstName", "survived", "sex", "age", "passengerClass"];
-		const actualHeaders = CsvService.getColumnNames(testData);
+		const actualHeaders = CsvService.getFieldNames(testData);
 		expect(actualHeaders).to.deep.equal(expectedHeaders);
 	});
 
